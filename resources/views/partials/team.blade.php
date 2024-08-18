@@ -1,1 +1,1 @@
-<h1>Team</h1>
+<x-layout><h1>Team</h1></x-layout>
