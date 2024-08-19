@@ -1,14 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 Route::get('/Dashboard', function () {
     return view('layouts.home');
 });
 
-Route::get('/team', function () {
-    return view('partials.team');
-});
+Route::get('/team', [UserController::class, 'index']);
+
+Route::get('/team/data', [UserController::class, 'getUsers']) ->name('team.data');
+    
 
 Route::get('/projects', function () {
     return view('partials.projects');
